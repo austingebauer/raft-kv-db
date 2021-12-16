@@ -241,7 +241,7 @@ func (s *Server) resetElectionTimeout() {
 }
 
 func (s *Server) logFmt(format string, args ...interface{}) {
-	prefix := fmt.Sprintf("state=%s id=%d term=%d: ", s.id, s.term, s.state.Get())
+	prefix := fmt.Sprintf("id=%d term=%d state=%s: ", s.id, s.term, s.state.Get())
 	log.Printf(prefix+format, args...)
 }
 
